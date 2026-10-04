@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Amino Acids, Peptides & Proteins Reviewer</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1d2330;--mu:#667085;--ac:#3b5bdb;--ok:#2f9e44;--no:#e03131;--bd:#e3e6ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151c;--card:#1a1e28;--tx:#e8eaf0;--mu:#9aa3b5;--ac:#7c93ff;--bd:#2a3040}}
+:root[data-theme="dark"]{--bg:#12151c;--card:#1a1e28;--tx:#e8eaf0;--mu:#9aa3b5;--ac:#7c93ff;--bd:#2a3040}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+#app{display:flex;min-height:100vh}nav{width:210px;background:var(--card);border-right:1px solid var(--bd);padding:14px 10px;position:sticky;top:0;height:100vh;overflow:auto;flex:none}
+nav h1{font-size:15px;margin:4px 8px 12px}nav button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--tx);padding:9px 10px;border-radius:8px;cursor:pointer;font:inherit;transition:.15s}nav button:hover{background:var(--bg)}nav button.on{background:var(--ac);color:#fff}
+main{flex:1;min-width:0;padding:18px 22px;max-width:980px}.top{display:flex;gap:8px;margin-bottom:14px}.top input{flex:1;padding:9px 12px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);font:inherit}
+#mb{display:none}.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.stat b{display:block;font-size:22px}.stat span{color:var(--mu);font-size:12px}
+.btn{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:9px 14px;cursor:pointer;font:inherit;margin:3px 4px 3px 0}.btn.g{background:var(--card);color:var(--tx);border:1px solid var(--bd)}
+.bar{height:8px;background:var(--bd);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:9px;background:var(--bg);border:1px solid var(--bd);color:var(--mu);margin-right:4px}
+h2{margin:6px 0 12px}h3{margin:0 0 6px}.src{font-size:12px;color:var(--mu)}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid var(--bd);padding:5px 8px;text-align:left}th{background:var(--bg)}
+details{border:1px solid var(--bd);border-radius:10px;padding:8px 12px;margin-bottom:8px;background:var(--card)}summary{cursor:pointer;font-weight:600}
+.opt{display:block;width:100%;text-align:left;padding:11px;margin:6px 0;border:1px solid var(--bd);border-radius:9px;background:var(--card);color:var(--tx);cursor:pointer;font:inherit}.opt.ok{border-color:var(--ok);background:rgba(47,158,68,.15)}.opt.no{border-color:var(--no);background:rgba(224,49,49,.13)}.opt.sel{border-color:var(--ac)}
+.fc{min-height:210px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:18px;cursor:pointer;padding:20px;transition:.2s}
+.flow{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;font-size:12px}.flow span{padding:3px 9px;border-radius:9px;background:var(--card);border:1px solid var(--bd)}
+mark{background:rgba(255,212,59,.5);color:inherit}select,input[type=number],input[type=text]{padding:8px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);font:inherit}
+@media(max-width:760px){#app{display:block}nav{position:fixed;z-index:9;left:0;top:0;transform:translateX(-100%);transition:.2s;width:230px}nav.open{transform:none}#mb{display:block}main{padding:12px}}
+</style></head><body><div id="app"><nav id="nav"></nav><main><div class="top"><button class="btn g" id="mb" onclick="nav.classList.toggle('open')">☰</button><input id="q" placeholder="Search terms, definitions, questions…" oninput="srch(this.value)"></div><div class="flow"><span>Learn</span>→<span>Understand</span>→<span>Flashcards</span>→<span>Quiz</span>→<span>Review mistakes</span>→<span>Quick Reference</span>→<span>Retake</span></div><div id="v"></div></main></div>
+<script>
+const SRC="Source: Amino Acids, Peptides and Proteins (uploaded slides)";
+const T=[
+{n:"Proteins Overview",s:"Intro slides",d:"What proteins are, the 20 amino acids, types and essential amino acids.",i:[
+["Proteins","Most abundant biological macromolecules, occurring in all cells and all parts of cells."],
+["The 20 amino acids","All proteins are constructed from the same ubiquitous set of 20 amino acids. Cells produce proteins with strikingly different properties and activities by joining the same 20 amino acids in many different combinations and sequences."],
+["Types of proteins","Structural: tendons, cartilage, hair, nails. Contractile: muscles. Transport: hemoglobin. Storage: milk. Hormonal: insulin, growth hormone. Enzyme: catalyzes reactions in cells. Protection: immune response."],
+["Protein (definition)","A macromolecule composed of one or more polypeptides. All 20 amino acids are necessary for protein synthesis. Of all molecules in living organisms, proteins have the most diverse functions."],
+["Essential amino acids","10 amino acids are not synthesized by the body and must be obtained from the diet: arg, his, ile, leu, lys, met, phe, thr, trp, val."]]},
+{n:"Amino Acids",s:"Amino Acids / Standard Amino Acids",d:"Basic structure and the five classes.",i:[
+["Amino acid","Building blocks of proteins. Has a carboxylic acid group, an amino group, and a side group R that gives unique characteristics (H2N–CH(R)–COOH)."],
+["Standard amino acids","The 20 amino acids commonly found in protein. Knowledge of their chemical properties is central to understanding biochemistry."],
+["Five classes","Grouped into 5 main classes by the properties of their R group, in particular polarity or tendency to interact with water at biological pH (near pH 7.0): nonpolar aliphatic; aromatic; polar uncharged; positively charged (basic); negatively charged (acidic)."]]},
+{n:"R-Group Classes",s:"Nonpolar, Aromatic, Polar, Charged R Groups",d:"Members and properties of each class.",i:[
+["Nonpolar, aliphatic R groups","Glycine, alanine, valine, leucine, methionine, isoleucine, proline. R groups are nonpolar and hydrophobic. Side chains of alanine, valine, leucine and isoleucine cluster together within proteins, stabilizing protein structure by hydrophobic interactions."],
+["Glycine","Simplest structure. Its very small side chain makes no real contribution to hydrophobic interactions."],
+["Methionine","Has a nonpolar thioether group in its side chain."],
+["Proline","Aliphatic side chain with a distinctive cyclic structure."],
+["Aromatic R groups","Phenylalanine, tyrosine, tryptophan: relatively nonpolar (hydrophobic); all can participate in hydrophobic interactions."],
+["Tyrosine and tryptophan polarity","The hydroxyl group of tyrosine can form hydrogen bonds and is an important functional group in some enzymes. Tyrosine and tryptophan are significantly more polar than phenylalanine because of the tyrosine hydroxyl group and the nitrogen of the tryptophan indole ring."],
+["Polar, uncharged R groups","Serine, threonine, cysteine, asparagine, glutamine. More soluble in water (more hydrophilic); contain functional groups that form hydrogen bonds with water. Serine and threonine: hydroxyl groups. Cysteine: sulfhydryl group. Asparagine and glutamine: amide groups."],
+["Positively charged (basic) R groups","The most hydrophilic R groups are those positively or negatively charged. Significant positive charge at pH 7: lysine, arginine, histidine. Lysine: second primary amino group at the ε position on its aliphatic chain. Arginine: positively charged guanidino group. Histidine: imidazole group; the only common amino acid with an ionizable side chain with a pKa near neutrality."],
+["Negatively charged (acidic) R groups","The 2 amino acids with R groups of net negative charge at pH 7.0 are aspartate and glutamate, each with a second carboxyl group."]]},
+{n:"pKa and pI",s:"pKa / pI tables",d:"pKa values and isoelectric points.",i:[
+["pKa1, pKa2, pKa3","pKa1 = α-carboxyl group, pKa2 = α-ammonium ion, pKa3 = side chain group."],
+["pI (isoelectric pH)","The pH at which a solute has no electric charge and thus does not move in an electric field."]],
+tb:{h:["Amino acid","pKa1","pKa2","pKa3","pI"],r:"Glycine 2.34 9.60 - 5.97;Alanine 2.34 9.69 - 6.01;Valine 2.32 9.62 - 5.97;Leucine 2.36 9.60 - 5.98;Isoleucine 2.36 9.68 - 6.02;Methionine 2.28 9.21 - 5.74;Proline 1.99 10.96 - 6.48;Phenylalanine 1.83 9.13 - 5.48;Tryptophan 2.38 9.39 - 5.89;Asparagine 2.02 8.80 - 5.41;Glutamine 2.17 9.13 - 5.65;Serine 2.21 9.15 - 5.68;Threonine 2.11 9.62 - 5.87;Tyrosine 2.20 9.11 10.07 5.66;Cysteine 1.96 10.28 8.18 5.07;Aspartic_acid 1.88 9.60 3.65 2.77;Glutamic_acid 2.19 9.67 4.25 3.22;Lysine 2.18 8.95 10.53 9.74;Arginine 2.17 9.04 12.48 10.76;Histidine 1.82 9.17 6.00 7.59"}},
+{n:"Stereoisomers & Zwitterions",s:"Amino Acid Stereoisomers / Zwitterions",d:"Chirality, D/L forms, charge behavior vs pH.",i:[
+["Asymmetric (chiral) carbon","A carbon atom with four different substituents. 19 of the 20 standard amino acids are asymmetric; glycine is symmetrical because its α-carbon is attached to 2 hydrogens."],
+["Stereoisomers","Molecules with chiral carbons can exist as stereoisomers: molecules that differ only in the spatial arrangement of their atoms (mirror images are enantiomers)."],
+["D and L forms","Designated D (dextrorotatory) or L (levorotatory) by the direction crystalline forms rotate polarized light, to the right and left respectively. Naturally-occurring proteins comprise exclusively the L forms of amino acids."],
+["Zwitterion","An amino acid has both a basic amine group and an acidic carboxylic acid group. An internal transfer of a hydrogen ion from –COOH to –NH2 leaves an ion with both a negative and a positive charge: a zwitterion, a compound with no overall electrical charge but with separate positively and negatively charged parts (H3N+–CH(R)–COO−)."],
+["Adding an alkali","Increasing pH by adding hydroxide ions removes the hydrogen ion from the –NH3+ group (NH3+ + OH− → NH2 + H2O). The result is a negative ion, no longer a zwitterion."],
+["Adding an acid","Decreasing pH by adding acid makes the –COO− part of the zwitterion pick up a hydrogen ion. The result is a positive ion, no longer a zwitterion."]]},
+{n:"Peptides",s:"Peptides and Proteins",d:"Peptide bond, classification, termini, naming.",i:[
+["Peptide","2 or more amino acids covalently joined by peptide bond."],
+["Peptide bond","A substituted amide linkage between the α-amino group of one amino acid and the α-carboxyl group of another, with the elimination of the elements of water."],
+["Classification of peptides","By number of amino acid units. Dipeptide: 2 amino acids joined by a peptide bond. 3–10 amino acids: tripeptides, tetrapeptides, pentapeptides, and so on. Oligopeptides: more than ten but fewer than 20. Polypeptide: macromolecule with 20 or more amino acid units."],
+["Residue","An amino acid unit in a peptide: the part left after losing a hydrogen atom from its amino group and the hydroxyl moiety from its carboxyl group."],
+["N-terminal and C-terminal","Amino-terminal (N-terminal) residue: the end with a free α-amino group. Carboxyl-terminal (C-terminal) residue: the other end, with a free carboxyl group."],
+["Amino acid sequence","The precise order of amino acids in the peptide. Peptides are named by sequence; by convention the higher-priority carboxyl group is to the right and the amino end to the left."],
+["Naming peptides","Name from the free amine (NH3+); use -yl endings for the amino acids; the last amino acid with the free carboxyl (COO−) uses its amino acid name. Examples: Ala-Gly = alanylglycine (AG); Gly-Ala = glycylalanine (GA); Ser-Gly-Tyr-Ala-Leu = serylglycyltyrosylalanylleucine (SGYAL)."]]},
+{n:"Functions of Protein",s:"Functions of Protein 1–8",d:"Eight functions with examples.",i:[
+["1. Catalysis","Enzymes are proteins that direct and accelerate thousands of biochemical reactions in digestion, energy capture and biosynthesis."],
+["2. Structure","Some proteins provide protection and support; often very specialized. Ex: collagen, fibroin, elastin."],
+["3. Movement","Proteins are involved in all cell movements. Ex: actin, tubulin."],
+["4. Defense","Keratin (skin cells) protects against mechanical and chemical injury. Fibrinogen and thrombin (blood clotting) prevent blood loss when vessels are damaged. Immunoglobulins (antibodies) are produced by lymphocytes when foreign organisms such as bacteria invade."],
+["5. Regulation","Binding a hormone or growth factor to cognate receptors on its target cell changes cellular function. Peptide hormones: insulin and glucagon regulate blood glucose levels. Growth hormones stimulate cell growth and division. Growth factors are polypeptides controlling animal cell division and differentiation, ex: PDGF (platelet-derived growth factor), EGF (epidermal growth factor)."],
+["6. Transport","Carriers of molecules and ions across membranes and between cells. Hemoglobin carries oxygen from lungs to tissues. Lipoproteins (LDL and HDL) transport lipids from liver and intestines to other organs. Transferrin and ceruloplasmin (serum proteins) transport iron and copper, respectively."],
+["7. Storage","Reservoir of essential nutrients. Ovalbumin (bird eggs) and casein (mammalian milk) are rich sources of organic nitrogen during development. Zein (plant protein) does a similar role in germinating seed."],
+["8. Stress response","Survival of abiotic stresses is mediated by certain proteins. Cytochrome P450: diverse group of enzymes in animals and plants that usually convert toxic organic contaminants into less toxic derivatives. Metallothionein: cysteine-rich intracellular protein in virtually all mammalian cells that binds and sequesters toxic metals such as cadmium, mercury and silver."]]},
+{n:"Protein Classification",s:"Protein Classification",d:"By shape and by composition.",i:[
+["Fibrous proteins","Polypeptide chains arranged side by side in long filaments; insoluble in water and physically tough; structural and protective functions."],
+["Globular proteins","Coiled into compact, roughly spherical shapes; usually water soluble; dynamic functions. Most enzymes are globular."],
+["Examples table","Fibrous (insoluble): collagens (animal hide, tendons, connective tissues); elastins (blood vessels, ligaments); fibrinogen (blood clotting); keratins (skin, wool, feathers, hooves, silk, fingernails); myosins (muscle tissue). Globular (soluble): hemoglobin (oxygen transport); immunoglobulins (immune response); insulin (hormone controlling glucose metabolism); ribonuclease (enzyme controlling RNA synthesis)."],
+["Simple proteins","Yield only amino acids on hydrolysis."],
+["Conjugated proteins","Much more common than simple proteins; yield other compounds (carbohydrates, fats, nucleic acids) plus amino acids on hydrolysis. A simple protein combined with a nonprotein component called a prosthetic group."],
+["Apoprotein / holoprotein","Apoprotein: a protein without its prosthetic group. Holoprotein: a protein combined with its prosthetic group."],
+["Conjugated types","Classified by prosthetic group: glycoproteins (carbohydrate); lipoproteins (lipid); metalloproteins (metal ions); phosphoproteins (phosphate groups); hemeproteins (heme groups)."]]},
+{n:"Protein Structure",s:"Protein Structure",d:"Primary to quaternary structure.",i:[
+["Primary structure","Simply the amino acid sequence (e.g. AGVGTVPMTAYGNDIQYYGQVT…)."],
+["Secondary structure","How segments of the peptide backbone orient into a regular pattern. Regular hydrogen bonding gives two patterns in nearly every known protein: the α-helix and the β-sheet. The location/direction of these periodic repeating structures is the secondary structure."],
+["α-helix","Rigid, rodlike structure formed when a polypeptide chain twists into a right-handed helical conformation. Hydrogen bonds form between the N-H of each amino acid and the carbonyl (C=O) of the amino acid four residues away. 3.6 residues per turn; R groups extend outward from the helix."],
+["β-pleated sheet","Forms when two or more polypeptide segments line up side by side. Each segment is a β-strand, fully extended rather than coiled. Stabilized by hydrogen bonds between backbone N-H and carbonyl groups of adjacent chains."],
+["Parallel vs antiparallel","Parallel: polypeptide chains arranged in the same direction. Antiparallel: run in opposite direction; more stable than parallel because fully colinear hydrogen bonds form."],
+["Tertiary structure","How the entire protein molecule coils into an overall three-dimensional shape; secondary elements combine to form it. R group interactions: hydrogen bond, disulfide bond (covalent), hydrophobic interaction, electrostatic interaction."],
+["Quaternary structure","How different protein molecules come together to yield large aggregate structures; formed by noncovalent association of tertiary structures."],
+["Views of a protein","Wireframe, ball and stick, spacefill, cartoon."]]},
+{n:"Denaturation",s:"Loss of Protein Structure",d:"Denaturing conditions.",i:[
+["Denaturation","The process of structure disruption."],
+["1. Strong acids or bases","Protonation of some side groups alters hydrogen bonding and salt bridge (electrostatic) patterns."],
+["2. Organic solvents","Interfere with hydrophobic interactions."],
+["3. Detergents","Disrupt hydrophobic interactions."],
+["4. Reducing agents","Disrupt hydrogen bonds and hydrophobic interactions."],
+["5. Salt concentration","Binding of salt ions to ionizable groups decreases interaction between oppositely charged groups."],
+["6. Heavy metal ions","May disrupt salt bridges and also bond with sulfhydryl groups."],
+["7. Temperature changes","Weak interactions (hydrogen bonds) are disrupted."],
+["8. Mechanical stress","Stirring and grinding disrupt the delicate balance of forces that maintain structure."]]}];
+const Q=[
+[0,"mc","Which is one of the 10 amino acids the body cannot synthesize?",["Glycine","Valine","Alanine","Serine"],1,"The list: arg, his, ile, leu, lys, met, phe, thr, trp, val.","E"],
+[1,"mc","The 5 classes of standard amino acids are grouped mainly by:",["Protein size","R group polarity / interaction with water at pH ~7","Number of peptide bonds","Dietary source"],1,"Grouping is by R group properties, especially polarity at near pH 7.0.","E"],
+[2,"tf","Glycine's small side chain contributes strongly to hydrophobic interactions.",["True","False"],1,"It makes no real contribution.","E"],
+[2,"mc","Which amino acid has an aliphatic side chain with a distinctive cyclic structure?",["Leucine","Methionine","Proline","Glycine"],2,"Proline.","E"],
+[2,"mc","The polarity of cysteine is contributed by its:",["Hydroxyl group","Amide group","Sulfhydryl group","Imidazole group"],2,"Serine/threonine: hydroxyl; Asn/Gln: amide; Cys: sulfhydryl.","M"],
+[2,"mc","Which amino acid is the only common one with an ionizable side chain of pKa near neutrality?",["Lysine","Arginine","Histidine","Aspartate"],2,"Histidine (imidazole group).","M"],
+[2,"ma","Select the amino acids with a significant positive R-group charge at pH 7:",["Lysine","Aspartate","Arginine","Glutamate"],[0,2],"Lys, Arg and His are positive; Asp and Glu are negative.","M"],
+[2,"id","Which amino acid has a guanidino group?",[],["arginine"],"Arginine has a positively charged guanidino group.","M"],
+[2,"mc","Why are Tyr and Trp more polar than Phe?",["They are charged","Tyr hydroxyl group and Trp indole nitrogen","They contain sulfur","They are aliphatic"],1,"The tyrosine hydroxyl and the nitrogen of the tryptophan indole ring.","D"],
+[3,"mc","pI is the pH at which a solute:",["Is fully protonated","Has no electric charge and does not move in an electric field","Is most soluble","Denatures"],1,"Isoelectric pH.","E"],
+[3,"mc","In the pKa table, pKa2 refers to the:",["α-carboxyl group","α-ammonium ion","Side chain","Peptide bond"],1,"pKa1 = α-carboxyl, pKa2 = α-ammonium ion, pKa3 = side chain.","M"],
+[3,"mc","Which of these has the highest pI?",["Lysine","Arginine","Histidine","Proline"],1,"Arginine 10.76 (lysine 9.74, histidine 7.59, proline 6.48).","D"],
+[3,"mc","Which has pI 2.77?",["Glutamic acid","Aspartic acid","Cysteine","Histidine"],1,"Aspartic acid 2.77; glutamic acid 3.22.","D"],
+[4,"mc","How many of the 20 standard amino acids are asymmetric?",["20","19","18","10"],1,"All but glycine, whose α-carbon has 2 hydrogens.","E"],
+[4,"tf","Naturally-occurring proteins comprise exclusively L forms of amino acids.",["True","False"],0,"Only L forms.","E"],
+[4,"mc","A zwitterion is a compound with:",["Net positive charge","Net negative charge","No overall charge but separate positive and negative parts","No charged parts"],2,"Result of internal H+ transfer from –COOH to –NH2.","M"],
+[4,"mc","Adding hydroxide to a zwitterionic amino acid solution produces:",["A positive ion","A negative ion","A neutral molecule with no charges","No change"],1,"H+ is removed from –NH3+, giving a negative ion.","M"],
+[5,"mc","Formation of a peptide bond eliminates:",["CO2","Ammonia","Water","Hydrogen gas"],2,"Elements of water are eliminated.","E"],
+[5,"mc","Oligopeptides contain:",["2 amino acids","More than ten but fewer than 20","20 or more","Exactly 10"],1,"Polypeptides have 20 or more.","M"],
+[5,"id","Name the peptide Ala-Gly using -yl endings.",[],["alanylglycine"],"Ala-Gly = alanylglycine (AG).","M"],
+[5,"mc","The N-terminal residue has:",["A free carboxyl group","A free α-amino group","A disulfide bond","A heme group"],1,"The C-terminal has the free carboxyl.","E"],
+[6,"mc","Metallothionein is an example of which function?",["Transport","Storage","Stress response","Defense"],2,"It sequesters toxic metals like cadmium, mercury, silver.","M"],
+[6,"mc","Insulin and glucagon regulate:",["Blood glucose levels","Oxygen transport","Blood clotting","Iron transport"],0,"Peptide hormones under Regulation.","E"],
+[7,"mc","Fibrous proteins are generally:",["Soluble and dynamic","Insoluble, tough, structural","Mostly enzymes","Spherical"],1,"Globular ones are soluble and include most enzymes.","E"],
+[7,"mc","The nonprotein component of a conjugated protein is the:",["Apoprotein","Residue","Prosthetic group","Zwitterion"],2,"A protein with it is a holoprotein.","M"],
+[7,"mc","Glycoproteins contain:",["Lipids","Carbohydrate","Metal ions","Phosphate"],1,"Lipoproteins contain lipids.","E"],
+[8,"mc","How many residues per turn in an α-helix?",["2.0","3.6","4.0","5.4"],1,"3.6 residues per turn.","M"],
+[8,"mc","Which β-sheet is more stable?",["Parallel","Antiparallel","Equal","Neither forms H bonds"],1,"Fully colinear hydrogen bonds form.","M"],
+[8,"mc","Quaternary structure is formed by:",["Covalent peptide bonds","Noncovalent association of tertiary structures","Amino acid sequence","Disulfide bonds only"],1,"Different protein molecules aggregate.","M"],
+[8,"tf","The disulfide bond in tertiary structure is a covalent bond.",["True","False"],0,"Others: hydrogen bond, hydrophobic and electrostatic interaction.","M"],
+[9,"mc","Which denaturing agent can bond with sulfhydryl groups?",["Detergents","Heavy metal ions","Organic solvents","Temperature"],1,"They may also disrupt salt bridges.","D"],
+[9,"mc","Detergents denature proteins by:",["Disrupting hydrophobic interactions","Adding disulfide bonds","Forming peptide bonds","Raising pI"],0,"Organic solvents also interfere with hydrophobic interactions.","M"]];
+const DN={E:"Easy",M:"Medium",D:"Difficult"};
+let S={vw:{},qa:{},fc:{},wq:[],hist:[]},cur="dash",qs=null,fs={g:"all",i:0,fl:0};
+try{S=Object.assign(S,JSON.parse(localStorage.getItem("rv")||"{}"))}catch(e){}
+const sv=()=>{try{localStorage.setItem("rv",JSON.stringify(S))}catch(e){}};
+const $=s=>document.querySelector(s),V=$("#v");
+const NV=[["dash","Dashboard"],["full","Full Reviewer"],["topics","Topics"],["expl","Explanations"],["quiz","Quiz"],["fc","Flashcards"],["qr","Quick Reference"],["prog","Progress"]];
+nav.innerHTML="<h1>🧬 Protein Reviewer</h1>"+NV.map(x=>`<button data-v="${x[0]}" onclick="go('${x[0]}')">${x[1]}</button>`).join("");
+const cards=()=>{let a=[];T.forEach((t,ti)=>t.i.forEach((x,ii)=>a.push([ti,ii])));return a};
+const nCards=cards().length,nCon=nCards;
+const tbl=t=>t.tb?`<div class="tw"><table><tr>${t.tb.h.map(h=>`<th>${h}</th>`).join("")}</tr>${t.tb.r.split(";").map(r=>`<tr>${r.split(" ").map(c=>`<td>${c.replace("_"," ")}</td>`).join("")}</tr>`).join("")}</table></div>`:"";
+const qc=ti=>Q.filter(q=>q[0]==ti).length;
+const tprog=ti=>{let k=T[ti].i.filter((_,j)=>S.fc[ti+"-"+j]=="k").length;return Math.round(((S.vw[ti]?1:0)*50)+k/T[ti].i.length*50)};
+const weak=()=>T.map((t,i)=>[i,S.qa[i]||{c:0,w:0}]).filter(x=>x[1].w>0&&x[1].c/(x[1].c+x[1].w)<.7).map(x=>x[0]);
+function go(v,x){cur=v;nav.classList.remove("open");if(v=="quiz"&&x===undefined)qs=null;if(v=="fc"&&x!==undefined){fs={g:x,i:0,fl:0}}R(x);document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.v==v));scrollTo(0,0)}
+function R(x){({dash,full,topics,expl,quiz,fc,qr,prog,topic})[cur](x)}
+function bar(p){return`<div class="bar"><i style="width:${p}%"></i></div>`}
+function stats(){let c=0,w=0;Object.values(S.qa).forEach(a=>{c+=a.c;w+=a.w});return{c,w,a:c+w,vw:Object.keys(S.vw).length,k:Object.values(S.fc).filter(x=>x=="k").length,r:Object.values(S.fc).filter(x=>x=="r").length}}
+function dash(){let s=stats(),p=Math.round((s.vw/T.length+s.k/nCards)/2*100),wk=weak();
+V.innerHTML=`<h2>Dashboard</h2><div class="grid">${[["Topics",T.length],["Concepts",nCon],["Quiz questions",Q.length],["Flashcards",nCards],["Progress",p+"%"],["Answered",s.a],["Correct",s.c],["Incorrect",s.w],["Topics reviewed",s.vw+"/"+T.length]].map(x=>`<div class="card stat"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("")}</div>${bar(p)}<p><button class="btn" onclick="go('topic',${Math.min(Object.keys(S.vw).length,T.length-1)})">Continue Studying</button><button class="btn" onclick="go('quiz')">Take a Quiz</button><button class="btn" onclick="go('fc')">Review Flashcards</button><button class="btn g" onclick="go('qr')">Quick Reference</button></p><div class="card"><h3>Weak topics</h3>${wk.length?wk.map(i=>`<span class="badge">${T[i].n}</span>`).join(""):"<span class='src'>None yet — take a quiz to find them.</span>"}</div><div class="card"><h3>Recently studied</h3>${(S.hist||[]).slice(-5).reverse().map(i=>`<a href="#" onclick="go('topic',${i});return false">${T[i].n}</a>`).join(" · ")||"<span class='src'>Nothing yet.</span>"}</div><div class="card src">${SRC}. All content comes only from this file.</div>`}
+function body(ti){let t=T[ti];return`<div class="card" id="t${ti}"><h3>${t.n}</h3><div class="src">Source Section: ${t.s}</div><p>${t.d}</p>${t.i.map(x=>`<p><b>${x[0]}</b><br>${x[1]}</p>`).join("")}${tbl(t)}</div>`}
+function full(){V.innerHTML="<h2>Full Reviewer</h2>"+T.map((_,i)=>body(i)).join("");T.forEach((_,i)=>S.vw[i]=1);sv()}
+function topics(){V.innerHTML="<h2>Topics</h2>"+T.map((t,i)=>`<div class="card"><h3>${t.n}</h3><p>${t.d}</p><span class="badge">${t.i.length} concepts</span><span class="badge">${qc(i)} questions</span><span class="badge">${t.i.length} flashcards</span>${bar(tprog(i))}<p><button class="btn" onclick="go('topic',${i})">Open</button><button class="btn g" onclick="go('fc',${i})">Flashcards</button></p></div>`).join("")}
+function topic(i){i=+i;S.vw[i]=1;S.hist=(S.hist||[]).filter(x=>x!=i).concat(i);sv();V.innerHTML=`<button class="btn g" onclick="go('topics')">← Topics</button>`+body(i)+`<button class="btn" onclick="go('expl')">Read Explanations</button><button class="btn" onclick="go('fc',${i})">Study Flashcards</button><button class="btn" onclick="startQ('t',${i},Math.min(5,qc(${i})))">Quiz this topic</button>`}
+function expl(){V.innerHTML="<h2>Explanations</h2><p class='src'>Tap a card to expand.</p>"+T.map(t=>`<h3>${t.n}</h3>`+t.i.map(x=>`<details><summary>${x[0]}</summary><p><b>What it is / means:</b> ${x[1]}</p><p class="src">Source Section: ${t.s}</p></details>`).join("")).join("")}
+function qr(){V.innerHTML="<h2>Quick Reference</h2>"+T.map(t=>`<h3>${t.n}</h3><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr))">${t.i.map(x=>`<div class="card" style="margin:0;font-size:13px"><mark>${x[0]}</mark><br>${x[1]}</div>`).join("")}</div>${tbl(t)}`).join("")}
+/* flashcards */
+function deck(){return cards().filter(c=>fs.g=="all"||c[0]==fs.g)}
+function fc(){let d=deck(),c=d[fs.i%d.length],it=T[c[0]].i[c[1]],k=c[0]+"-"+c[1];
+V.innerHTML=`<h2>Flashcards</h2><select onchange="fs={g:this.value,i:0,fl:0};fc()"><option value="all">All Flashcards</option>${T.map((t,i)=>`<option value="${i}" ${fs.g==i?"selected":""}>${t.n}</option>`).join("")}</select> <span class="badge">${fs.i%d.length+1}/${d.length}</span><span class="badge">${S.fc[k]=="k"?"Known":S.fc[k]=="r"?"Need review":"Unmarked"}</span><div class="card fc" onclick="fs.fl^=1;fc()">${fs.fl?it[1]:"What is / describe: <b>&nbsp;"+it[0]+"</b>"}</div><button class="btn g" onclick="fs.i=(fs.i-1+d.length)%d.length;fs.fl=0;fc()">Previous</button><button class="btn g" onclick="fs.i++;fs.fl=0;fc()">Next</button><button class="btn g" onclick="fs.sh=1;shuf()">Shuffle</button><button class="btn" onclick="mk('${k}','k')">Mark as Known</button><button class="btn" style="background:var(--no)" onclick="mk('${k}','r')">Need Review</button>`}
+let SH=null;function shuf(){let d=deck();fs.i=Math.floor(Math.random()*d.length);fs.fl=0;fc()}
+function mk(k,v){S.fc[k]=v;sv();fs.i++;fs.fl=0;fc()}
+/* quiz */
+function quiz(){if(qs)return qrun();V.innerHTML=`<h2>Quiz</h2><div class="card"><p>Mode <select id="qm"><option value="a">All Topics</option><option value="w">Weak Topics</option><option value="r">Random Quiz</option>${T.map((t,i)=>`<option value="t${i}">Topic: ${t.n}</option>`).join("")}</select></p><p>Questions <select id="qn"><option>5</option><option>10</option><option>20</option><option>30</option><option value="c">Custom</option></select> <input id="qc" type="number" min="1" max="${Q.length}" value="8" style="width:70px"></p><button class="btn" onclick="sq()">Start</button></div>`}
+function sq(){let m=$("#qm").value,n=$("#qn").value;n=n=="c"?+$("#qc").value:+n;startQ(m[0]=="t"?"t":m,m[0]=="t"?+m.slice(1):0,n)}
+function startQ(m,t,n){let p=Q.map((q,i)=>i);if(m=="t")p=p.filter(i=>Q[i][0]==t);if(m=="w"){let w=weak();p=p.filter(i=>w.includes(Q[i][0]));if(!p.length)p=Q.map((q,i)=>i)}
+p.sort(()=>Math.random()-.5);qs={p:p.slice(0,Math.max(1,n)),i:0,r:[],d:0,sel:[]};cur="quiz";R()}
+function qrun(){if(qs.i>=qs.p.length)return qend();let q=Q[qs.p[qs.i]],h=`<h2>Quiz</h2>${bar(qs.i/qs.p.length*100)}<div class="card"><span class="badge">${T[q[0]].n}</span><span class="badge">${DN[q[6]]}</span><span class="badge">${qs.i+1}/${qs.p.length}</span><h3>${q[2]}</h3>`;
+if(q[1]=="id")h+=`<input type="text" id="ia" placeholder="Your answer" ${qs.d?"disabled":""}>`;
+else h+=q[3].map((o,j)=>{let c="opt";if(qs.d){if(q[1]=="ma"?q[4].includes(j):q[4]==j)c+=" ok";else if(qs.sel.includes(j))c+=" no"}else if(qs.sel.includes(j))c+=" sel";return`<button class="${c}" onclick="pk(${j})">${o}</button>`}).join("");
+if(qs.d)h+=`<p><b>${qs.ok?"Correct.":"Incorrect."}</b> ${q[5]}</p><button class="btn" onclick="qs.i++;qs.d=0;qs.sel=[];qrun()">Next</button>`;else h+=`<button class="btn" onclick="ck()">Check answer</button>`;V.innerHTML=h+"</div>"}
+function pk(j){if(qs.d)return;let q=Q[qs.p[qs.i]];if(q[1]=="ma")qs.sel=qs.sel.includes(j)?qs.sel.filter(x=>x!=j):qs.sel.concat(j);else qs.sel=[j];qrun()}
+function ck(){let q=Q[qs.p[qs.i]],ok;if(q[1]=="id"){let v=($("#ia").value||"").trim().toLowerCase();if(!v)return;ok=q[4].includes(v)}else{if(!qs.sel.length)return;ok=q[1]=="ma"?[...qs.sel].sort().join()==q[4].join():qs.sel[0]==q[4]}
+qs.ok=ok;qs.d=1;qs.r.push([qs.p[qs.i],ok]);let a=S.qa[q[0]]||(S.qa[q[0]]={c:0,w:0});ok?a.c++:a.w++;if(!ok&&!S.wq.includes(qs.p[qs.i]))S.wq.push(qs.p[qs.i]);sv();qrun()}
+function qend(){let c=qs.r.filter(x=>x[1]).length,n=qs.r.length,bad=qs.r.filter(x=>!x[1]),bt=[...new Set(bad.map(x=>Q[x[0]][0]))];S.hist2=(S.hist2||[]).concat(Math.round(c/n*100));sv();
+V.innerHTML=`<h2>Results</h2><div class="card"><b style="font-size:24px">${c}/${n} (${Math.round(c/n*100)}%)</b><p>Correct: ${c} · Incorrect: ${n-c}</p><p>Topics needing improvement: ${bt.map(i=>`<span class="badge">${T[i].n}</span>`).join("")||"None"}</p></div>${bad.map(x=>`<div class="card"><b>${Q[x[0]][2]}</b><br>${Q[x[0]][1]=="id"?Q[x[0]][4][0]:[].concat(Q[x[0]][4]).map(j=>Q[x[0]][3][j]).join(", ")}<br><span class="src">${Q[x[0]][5]}</span></div>`).join("")}<button class="btn" onclick="qs=null;quiz()">New quiz</button><button class="btn g" onclick="go('qr')">Quick Reference</button>`}
+function prog(){let s=stats();V.innerHTML=`<h2>Progress</h2><div class="card"><p>Topics viewed: ${s.vw}/${T.length}</p>${bar(s.vw/T.length*100)}<p>Flashcards known: ${s.k}/${nCards}</p>${bar(s.k/nCards*100)}<p>Marked need review: ${s.r}</p><p>Quiz accuracy: ${s.a?Math.round(s.c/s.a*100):0}% (${s.c} correct, ${s.w} incorrect)</p>${bar(s.a?s.c/s.a*100:0)}<p>Recent quiz scores: ${(S.hist2||[]).slice(-8).join("%, ")||"none"}${S.hist2&&S.hist2.length?"%":""}</p></div>${T.map((t,i)=>`<div class="card"><b>${t.n}</b> ${tprog(i)}%${bar(tprog(i))}</div>`).join("")}<button class="btn g" id="rb" onclick="resetP(this)">Reset progress</button>`}
+function resetP(b){if(!b.dataset.c){b.dataset.c=1;b.textContent="Tap again to confirm reset";b.style.background="var(--no)";b.style.color="#fff";setTimeout(()=>{if(b.isConnected){delete b.dataset.c;b.textContent="Reset progress";b.style.background="";b.style.color=""}},4000);return}
+S={vw:{},qa:{},fc:{},wq:[],hist:[],hist2:[]};qs=null;fs={g:"all",i:0,fl:0};try{localStorage.removeItem("rv")}catch(e){}sv();prog()}
+function srch(v){v=v.trim().toLowerCase();if(v.length<2){R();return}let h="",re=new RegExp("("+v.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","ig");
+T.forEach((t,ti)=>t.i.forEach(x=>{if((x[0]+x[1]).toLowerCase().includes(v))h+=`<div class="card"><span class="badge">Reviewer / Flashcard / Quick Ref</span><span class="badge">${t.n}</span><br><b>${x[0].replace(re,"<mark>$1</mark>")}</b><br>${x[1].replace(re,"<mark>$1</mark>")}</div>`}));
+Q.forEach(q=>{if((q[2]+(q[3]||[]).join(" ")).toLowerCase().includes(v))h+=`<div class="card"><span class="badge">Quiz question</span><span class="badge">${T[q[0]].n}</span><br>${q[2].replace(re,"<mark>$1</mark>")}</div>`});
+T.forEach(t=>{if(t.tb&&t.tb.r.toLowerCase().replace(/_/g," ").includes(v))h+=`<div class="card"><span class="badge">pKa/pI table</span> ${t.n}</div>`});V.innerHTML=`<h2>Search: ${v}</h2>`+(h||"<p>No results.</p>")}
+go("dash");
+</script></body></html>
